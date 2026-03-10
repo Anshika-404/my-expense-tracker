@@ -7,7 +7,7 @@ function CurrencyConverter({ total }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Don't fetch if total is 0
+    
     if (total <= 0) {
       setConvertedAmount(0);
       return;
@@ -17,7 +17,7 @@ function CurrencyConverter({ total }) {
       setIsLoading(true);
       setError(null);
       try {
-        // We assume the base currency is USD
+     
         const response = await fetch(
           `https://api.frankfurter.app/latest?amount=${total}&from=USD&to=${targetCurrency}`
         );
@@ -34,7 +34,7 @@ function CurrencyConverter({ total }) {
     };
 
     fetchConversion();
-  }, [total, targetCurrency]); // Re-run if total or currency changes
+  }, [total, targetCurrency]); 
 
   return (
     <div style={{ 

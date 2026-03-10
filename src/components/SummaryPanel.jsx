@@ -1,9 +1,8 @@
 function SummaryPanel({ expenses }) {
-  // 1. Calculate Total Amount
+
   const total = expenses.reduce((sum, item) => sum + item.amount, 0);
 
-  // 2. Calculate Breakdown by Category
-  // This creates an object like { Food: 50, Travel: 20 }
+ 
   const categoryTotals = expenses.reduce((acc, item) => {
     acc[item.category] = (acc[item.category] || 0) + item.amount;
     return acc;
