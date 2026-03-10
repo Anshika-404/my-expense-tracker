@@ -1,0 +1,22 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px; 
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
